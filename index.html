@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diya Mandot — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="frame">
+
+    <!-- ── NAV ── -->
+    <nav id="navbar">
+      <a class="logo" href="#hero">dm.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#creative">Creative</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#conversations">Conversations</a></li>
+        <li><a href="#contact" class="nav-cta">Say Hello</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-eyebrow-row">
+        <span class="hero-eyebrow reveal">CS · AI · FinTech · University of Utah</span>
+        <div class="hero-available reveal">
+          <span class="available-dot"></span>Open to opportunities
+        </div>
+      </div>
+      <div class="hero-body">
+        <div class="hero-left">
+          <h1 class="hero-name reveal">
+            <span class="name-line name-first">Diya</span>
+            <span class="name-line name-last">Mandot</span>
+          </h1>
+          <p class="hero-desc reveal">I'm equal parts technical and creative. I build AI systems by day and paint, sing, and hunt for good coffee the rest of the time. I think the best work happens when you bring both sides to the table.</p>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-dark">View Work</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-right reveal">
+          <div class="hero-photo-frame">
+            <img src="images/diya-photo.jpg" alt="Diya Mandot" />
+          </div>
+          <div class="hero-photo-tag">
+            <span class="available-dot"></span>Salt Lake City, UT
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <strong>Goldman Sachs</strong>
+          <span>Incoming Summer '26</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <strong>5+</strong>
+          <span>Internships</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <strong>3+</strong>
+          <span>Hackathon wins</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <strong>SPUR</strong>
+          <span>National research award</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <strong>Dec '26</strong>
+          <span>Graduating</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         BY THE NUMBERS
+    ══════════════════════════════════════ -->
+    <section id="glance">
+      <p class="glance-eyebrow" aria-hidden="true">By the numbers</p>
+      <div class="glance-inner">
+
+        <div class="glance-stat">
+          <span class="glance-num"><span class="count" data-target="11">0</span><span class="glance-unit"> yrs</span></span>
+          <span class="glance-label">Hindustani classical music training</span>
+        </div>
+        <div class="glance-divider"></div>
+        <div class="glance-stat">
+          <span class="glance-num"><span class="count" data-target="147">0</span></span>
+          <span class="glance-label">countries my Independence Day TV performance aired across</span>
+        </div>
+        <div class="glance-divider"></div>
+        <div class="glance-stat">
+          <span class="glance-num"><span class="count" data-target="600">0</span><span class="glance-unit">+</span></span>
+          <span class="glance-label">FDA public comments analyzed in SPUR research</span>
+        </div>
+        <div class="glance-divider"></div>
+        <div class="glance-stat">
+          <span class="glance-num"><span class="count" data-target="3">0</span><span class="glance-unit">+</span></span>
+          <span class="glance-label">hackathon wins</span>
+        </div>
+        <div class="glance-divider"></div>
+        <div class="glance-stat">
+          <span class="glance-num"><span class="count" data-target="12">0</span></span>
+          <span class="glance-label">Adobe creative badges earned</span>
+        </div>
+
+      </div>
+      <div class="glance-marquee" aria-hidden="true">
+        <div class="glance-marquee-track">
+          <img class="mq-photo" src="images/1775087717662.jpeg" alt="" />
+          <span>Kahlert Impact Prize</span><span class="dot">·</span>
+          <span>Hindustani Vocalist</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/intermountain.jpeg" alt="" style="object-position:center 30%" />
+          <span>Hackathon Champion</span><span class="dot">·</span>
+          <span>SPUR Research Fellow</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/adobe .jpeg" alt="" />
+          <span>Adobe Creative Campus</span><span class="dot">·</span>
+          <span>Goldman Sachs '26</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/1763865860190.jpeg" alt="" style="object-position:center center" />
+          <span>AI Symposium Co-Chair</span><span class="dot">·</span>
+          <span>Painter &amp; Artist</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/1772660907169.jpeg" alt="" style="object-position:center center" />
+          <span>Coffee Shop Connoisseur</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/1775087717662.jpeg" alt="" />
+          <span>Kahlert Impact Prize</span><span class="dot">·</span>
+          <span>Hindustani Vocalist</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/intermountain.jpeg" alt="" style="object-position:center 30%" />
+          <span>Hackathon Champion</span><span class="dot">·</span>
+          <span>SPUR Research Fellow</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/adobe .jpeg" alt="" />
+          <span>Adobe Creative Campus</span><span class="dot">·</span>
+          <span>Goldman Sachs '26</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/1763865860190.jpeg" alt="" style="object-position:center center" />
+          <span>AI Symposium Co-Chair</span><span class="dot">·</span>
+          <span>Painter &amp; Artist</span><span class="dot">·</span>
+          <img class="mq-photo" src="images/1772660907169.jpeg" alt="" style="object-position:center center" />
+          <span>Coffee Shop Connoisseur</span><span class="dot">·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         IN CONVERSATION WITH
+    ══════════════════════════════════════ -->
+    <section id="conversations">
+      <div class="section-header reveal">
+        <h2 class="h2">People I've <em>talked to.</em></h2>
+        <p class="conv-intro">Through the Kahlert Initiative, the AI Symposium, and a habit of just asking, I've gotten to sit with people who genuinely changed how I think. Curiosity gets you into rooms you don't always expect.</p>
+      </div>
+      <div class="conv-grid">
+
+        <div class="conv-card reveal">
+          <div class="conv-photo-wrap">
+            <img src="images/lucid former ceo karl sun.jpeg" alt="Diya with Karl Sun" />
+          </div>
+          <div class="conv-info">
+            <h3 class="conv-name">Karl Sun</h3>
+            <span class="conv-title">Co-Founder &amp; Former CEO</span>
+            <span class="conv-org">Lucid Software</span>
+            <p class="conv-reflection">"Talking to Karl changed how I think about building software that scales without losing its soul."</p>
+          </div>
+        </div>
+
+        <div class="conv-card reveal">
+          <div class="conv-photo-wrap">
+            <img src="images/deepsee ceo.jpeg" alt="Diya with Steve Shillingford" style="object-position: center center;" />
+          </div>
+          <div class="conv-info">
+            <h3 class="conv-name">Steve Shillingford</h3>
+            <span class="conv-title">Chief Executive Officer</span>
+            <span class="conv-org">DeepSee.ai</span>
+            <p class="conv-reflection">"Steve showed me what it looks like to build AI with conviction, and the discipline to know what not to build."</p>
+          </div>
+        </div>
+
+        <div class="conv-card reveal">
+          <div class="conv-photo-wrap">
+            <img src="images/jennifer smith zions cio.jpeg" alt="Diya with Jennifer Smith" style="object-position: center 20%;" />
+          </div>
+          <div class="conv-info">
+            <h3 class="conv-name">Jennifer Smith</h3>
+            <span class="conv-title">Executive Vice President</span>
+            <span class="conv-org">Zions Bancorporation</span>
+            <p class="conv-reflection">"Jennifer made it clear that the most important security is the kind that earns trust, not just compliance."</p>
+          </div>
+        </div>
+
+        <div class="conv-card reveal">
+          <div class="conv-photo-wrap">
+            <img src="images/nvidia vp.jpeg" alt="Diya with William Barkley" />
+          </div>
+          <div class="conv-info">
+            <h3 class="conv-name">William Barkley</h3>
+            <span class="conv-title">VP of Product</span>
+            <span class="conv-org">NVIDIA</span>
+            <p class="conv-reflection">"William gave me a new frame for thinking about AI infrastructure, and why what's invisible usually matters most."</p>
+          </div>
+        </div>
+
+        <div class="conv-card reveal">
+          <div class="conv-photo-wrap">
+            <img src="images/1769814388802.jpeg" alt="Diya with Telle Whitney" />
+          </div>
+          <div class="conv-info">
+            <h3 class="conv-name">Telle Whitney</h3>
+            <span class="conv-title">Co-Founder, Grace Hopper Celebration</span>
+            <span class="conv-org">Former CEO, AnitaB.org</span>
+            <p class="conv-reflection">"Telle reminded me that the most powerful technology is built by people who refuse to be invisible."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════ -->
+    <section id="about">
+      <div class="about-layout">
+        <div class="about-label-col">
+        </div>
+        <div class="about-text-col">
+          <h2 class="h2 reveal">A little bit of<br/><em>everything.</em></h2>
+          <p class="body-lg reveal">CS + AI + FinTech at the University of Utah Honors College, graduating December 2026. My dad is in tech, my mom was a textile designer. I ended up somewhere in between: someone who builds things and can't stop thinking about how they look and feel.</p>
+          <p class="body-lg reveal">11 years of Hindustani classical music, national TV in India, paintings sold to fund hospital donations, and a running list of coffee shops ranked by vibe and iced coffee quality. Still figuring out how to weave all of it together, and honestly, that's the best part.</p>
+        </div>
+        <div class="about-avatar-col reveal">
+          <img src="images/diya-avatar.png" alt="Diya Mandot" class="about-avatar" />
+          <div class="about-badges">
+            <span class="badge">Honors · Dean's List</span>
+            <span class="badge">SPUR Award Selected</span>
+            <span class="badge">12 Adobe Badges</span>
+            <span class="badge">Goldman Sachs '26</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         INTERNSHIPS
+    ══════════════════════════════════════ -->
+    <section id="internships">
+      <div class="section-header reveal">
+        <h2 class="h2">Where I've <em>worked.</em></h2>
+      </div>
+      <div class="services-list">
+
+        <div class="service-divider"></div>
+        <div class="service-item reveal">
+          <div class="service-meta">
+            <span class="service-date">Summer 2026</span>
+          </div>
+          <div class="service-body">
+            <h3>Summer Analyst — Tax Engineering</h3>
+            <p class="service-org">Goldman Sachs</p>
+            <p class="service-detail">New York, summer 2026. Tax Engineering team. Goldman wasn't on my radar until it was, and now I'm excited to see what I get to build there.</p>
+            <div class="service-tags"><span>FinTech</span><span>Tax Engineering</span><span>Goldman Sachs</span></div>
+          </div>
+          <div class="service-thumb service-thumb--logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Goldman_Sachs_logo.svg/250px-Goldman_Sachs_logo.svg.png" alt="Goldman Sachs" />
+          </div>
+        </div>
+
+        <div class="service-divider"></div>
+        <div class="service-item reveal">
+          <div class="service-meta">
+            <span class="service-date">Jun 2024 – Present</span>
+          </div>
+          <div class="service-body">
+            <h3>Adobe Creative Consultant &amp; Ambassador</h3>
+            <p class="service-org">University of Utah</p>
+            <p class="service-detail">Helping students in the Adobe Creative Commons with Premiere, Illustrator, and Express. Completed all 12 Adobe badges. One of the parts of my week I genuinely look forward to.</p>
+            <div class="service-tags"><span>Adobe Suite</span><span>Creative Strategy</span><span>Consulting</span></div>
+          </div>
+          <div class="service-thumb service-thumb--logo">
+            <img src="https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg" alt="Adobe" />
+          </div>
+        </div>
+
+        <div class="service-divider"></div>
+        <div class="service-item reveal">
+          <div class="service-meta">
+            <span class="service-date">Sep 2025 – Jan 2026</span>
+          </div>
+          <div class="service-body">
+            <h3>AI &amp; ML Engineering Intern</h3>
+            <p class="service-org">Western Governors University</p>
+            <p class="service-detail">Built WGU's ML model evaluation framework on Databricks and MLflow, plus a Genie-based Jira evaluator to automate Definition of Ready checks.</p>
+            <div class="service-tags"><span>Python</span><span>Databricks</span><span>MLflow</span><span>Vector Search</span></div>
+          </div>
+          <div class="service-thumb service-thumb--logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/WGU-Marketing-logo_%281%29.png" alt="WGU" />
+          </div>
+        </div>
+
+        <div class="service-divider"></div>
+        <div class="service-item reveal">
+          <div class="service-meta">
+            <span class="service-date">May – Aug 2025</span>
+          </div>
+          <div class="service-body">
+            <h3>IT Security Intern</h3>
+            <p class="service-org">Zions Bancorporation</p>
+            <p class="service-detail">Cloud security reviews, IAM frameworks, NIST and SOX compliance. Came in knowing the theory, left understanding where it breaks in practice.</p>
+            <div class="service-tags"><span>Cloud Security</span><span>IAM</span><span>NIST</span><span>SOX</span></div>
+          </div>
+          <div class="service-thumb service-thumb--logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Zions_Bancorporation_Logo.svg/250px-Zions_Bancorporation_Logo.svg.png" alt="Zions Bancorporation" />
+          </div>
+        </div>
+
+        <div class="service-divider"></div>
+        <div class="service-item reveal">
+          <div class="service-meta">
+            <span class="service-date">Feb – Aug 2025</span>
+          </div>
+          <div class="service-body">
+            <h3>Associate Software Developer Intern</h3>
+            <p class="service-org">Western Governors University</p>
+            <p class="service-detail">Backend APIs in Node.js and AWS, transfer student data pipelines through Kafka and Salesforce. Wrote the tests, shipped to production.</p>
+            <div class="service-tags"><span>Node.js</span><span>AWS</span><span>Kafka</span><span>CI/CD</span></div>
+          </div>
+          <div class="service-thumb service-thumb--logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/WGU-Marketing-logo_%281%29.png" alt="WGU" />
+          </div>
+        </div>
+
+        <div class="service-divider"></div>
+        <div class="service-item reveal">
+          <div class="service-meta">
+            <span class="service-date">Nov 2024 – Apr 2025</span>
+          </div>
+          <div class="service-body">
+            <h3>AI &amp; ML Intern</h3>
+            <p class="service-org">CourtEasyAI × Microsoft for Startups</p>
+            <p class="service-detail">Scaled a RAG pipeline to 10M+ legal documents and 5K+ daily queries. Benchmarked 8 LLM families against LegalBench: cut hallucinations 35%, improved retrieval 28%.</p>
+            <div class="service-tags"><span>RAG</span><span>LLMs</span><span>LegalBench</span><span>Vector Search</span></div>
+          </div>
+          <div class="service-thumb service-thumb--logo">
+            <img src="images/nugen-logo.png" alt="Nugen Intelligence" />
+          </div>
+        </div>
+
+        <div class="service-divider"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROJECTS
+    ══════════════════════════════════════ -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <h2 class="h2">Things I've <em>built.</em></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card project-featured reveal">
+          <div class="project-featured-text">
+            <div class="project-header">
+              <div class="project-tags-row">
+                <span class="ptag ptag--live">Active Research</span>
+                <span class="ptag ptag--award">SPUR Award Recipient</span>
+              </div>
+              <span class="project-year">2026</span>
+            </div>
+            <h3>AI &amp; HCI for<br/>Public Policy</h3>
+            <p>Selected for the nationally competitive SPUR program, one of those things you apply for half-convinced it won't happen. I'm building LLM pipelines to analyze 600+ FDA public comments on ALS drug policy, then checking them against human-coded data to see where the model gets it right, and where it confidently doesn't.</p>
+            <div class="project-tech-row">
+              <span>LLMs</span><span>NLP</span><span>Responsible AI</span><span>HCI</span><span>Public Policy</span>
+            </div>
+          </div>
+          <div class="project-featured-art">
+            <div class="art-orb art-orb-1"></div>
+            <div class="art-orb art-orb-2"></div>
+            <div class="art-orb art-orb-3"></div>
+            <div class="art-label">Faculty-mentored<br/>Independent Research</div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-body">
+            <div class="project-header">
+              <span class="ptag">Research</span>
+              <span class="project-year">2024–25</span>
+            </div>
+            <h3>BioGraphRag</h3>
+            <p>A knowledge graph chatbot built on 1M+ biomedical entities (proteins, genes, diseases) that actually answers medical questions well. 40% accuracy improvement, sub-500ms latency. Started as a research project and turned into one of the things I'm most proud of building.</p>
+            <div class="project-stats">
+              <div class="pstat"><strong>1M+</strong><span>entities</span></div>
+              <div class="pstat"><strong>40%</strong><span>accuracy ↑</span></div>
+              <div class="pstat"><strong>&lt;500ms</strong><span>latency</span></div>
+            </div>
+            <div class="project-tech-row">
+              <span>LlamaIndex</span><span>NebulaGraph</span><span>Docker</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-body">
+            <div class="project-header">
+              <span class="ptag">Mobile App</span>
+              <span class="project-year">2023</span>
+            </div>
+            <h3>SaveSaltLake</h3>
+            <p>Built with two other female developers for the Technovation Girls Challenge. The Great Salt Lake is disappearing, so we made an app to help people actually care about that, through gamified conservation and real community feedback. One of my earliest projects and still one of my favorites.</p>
+            <div class="project-tech-row">
+              <span>Mobile</span><span>UX Design</span><span>Gamification</span><span>Social Impact</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         HACKATHONS
+    ══════════════════════════════════════ -->
+    <section id="awards">
+      <div class="section-header reveal">
+        <h2 class="h2">Awards &amp; <em>recognition.</em></h2>
+      </div>
+      <div class="hack-grid">
+
+        <div class="hack-card hack-card--award hack-card--featured reveal">
+          <div class="hack-featured-inner">
+            <div class="hack-featured-text">
+              <div class="hack-card-top">
+                <div class="hack-place">
+                  <div>
+                    <strong>1st Place · OpenAI Hackathon</strong>
+                  </div>
+                </div>
+              </div>
+              <h3>PiecesOfThem</h3>
+              <p class="hack-org">University of Utah × OpenAI · April 2026</p>
+              <p class="hack-desc">Sanfilippo Syndrome is rare, fatal, and affects children. We built a RAG system to automate FDA drug approval paperwork for families fighting it. The problem made us want to get it right. And we did.</p>
+              <div class="project-tech-row">
+                <span>RAG</span><span>OpenAI</span><span>Healthcare AI</span><span>Document Automation</span>
+              </div>
+            </div>
+            <div class="hack-featured-img">
+              <img src="images/openai.jpeg" alt="1st Place Certificate — OpenAI Hackathon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="hack-card hack-card--award reveal">
+          <div class="hack-card-top">
+            <div class="hack-place">
+              <div>
+                <strong>SPUR National Fellowship</strong>
+                <span>$5,000 merit stipend</span>
+              </div>
+            </div>
+          </div>
+          <h3>Selected for SPUR</h3>
+          <p class="hack-org">University of Utah Research Program</p>
+          <p class="hack-desc">Faculty-mentored research fellowship. Building LLM pipelines to analyze 600+ FDA public comments on ALS drug policy and benchmarking against human-coded data.</p>
+          <div class="project-tech-row">
+            <span>Responsible AI</span><span>LLMs</span><span>Public Policy</span><span>HCI</span>
+          </div>
+        </div>
+
+        <div class="hack-card hack-card--award reveal">
+          <div class="hack-card-top">
+            <div class="hack-place">
+              <div>
+                <strong>Kahlert Impact Prize</strong>
+                <span>Kahlert School of Computing</span>
+              </div>
+            </div>
+          </div>
+          <h3>Kahlert Impact Prize</h3>
+          <p class="hack-org">University of Utah</p>
+          <p class="hack-desc">Recognized for leadership and community impact within the Kahlert School of Computing.</p>
+          <div class="project-tech-row">
+            <span>Computing</span><span>Impact</span><span>University of Utah</span>
+          </div>
+        </div>
+
+        <div class="hack-card reveal">
+          <div class="hack-card-top">
+            <div class="hack-place">
+              <div>
+                <strong>Honorable Mention · Intermountain AI</strong>
+              </div>
+            </div>
+            <span class="hack-time">Built in 6 hours</span>
+          </div>
+          <h3>CommunityFlow AI</h3>
+          <p class="hack-org">Intermountain Health Hackathon</p>
+          <p class="hack-desc">Intermountain's real-time staffing and supply workflow: MS Forms → email chains → Excel. We rebuilt the whole thing with an AI routing layer in 6 hours.</p>
+          <a href="https://communityflow-ai.com/" target="_blank" rel="noopener" class="hack-link">Visit communityflow-ai.com →</a>
+          <ul class="hack-bullets">
+            <li>AI interprets and classifies incoming requests in real time</li>
+            <li>Intelligently routes staffing vs. material delivery needs</li>
+            <li>Chatbot lets users submit requests in seconds from simple prompts</li>
+          </ul>
+          <div class="project-tech-row">
+            <span>AI/ML</span><span>Real-time Ops</span><span>Healthcare</span><span>Chatbot</span>
+          </div>
+        </div>
+
+        <div class="hack-card reveal">
+          <div class="hack-card-top">
+            <div class="hack-place">
+              <div>
+                <strong>3rd Place · Climate Hackathon</strong>
+              </div>
+            </div>
+            <span class="hack-time">Built in 24 hours</span>
+          </div>
+          <h3>VoltVault</h3>
+          <p class="hack-org">Wilkes Center for Climate Science &amp; Policy</p>
+          <p class="hack-desc">Turned parked EV batteries into a distributed grid storage network. Built in 24 hours, pitched to climate science judges, placed 3rd.</p>
+          <ul class="hack-bullets">
+            <li>Engineered a bidirectional charger system to optimize grid energy storage</li>
+            <li>Grounded in real datasets on EV adoption and grid demand</li>
+            <li>Full pitch to climate science &amp; policy judges</li>
+          </ul>
+          <div class="project-tech-row">
+            <span>Clean Energy</span><span>EV Tech</span><span>Data Analysis</span><span>Climate</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SKILLS
+    ══════════════════════════════════════ -->
+    <section id="skills">
+      <div class="skills-layout">
+        <div class="skills-intro reveal">
+          <h2 class="h2">The <em>toolkit.</em></h2>
+        </div>
+        <div class="skills-groups">
+          <div class="skill-group reveal">
+            <h4>Languages</h4>
+            <div class="skill-pills">
+              <span>Python</span><span>Java</span><span>C#</span><span>C++</span><span>SQL</span><span>C</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4>AI / ML</h4>
+            <div class="skill-pills">
+              <span>RAG</span><span>Vector Search</span><span>LlamaIndex</span><span>MLflow</span><span>Agent Frameworks</span><span>LLMs</span><span>Knowledge Graphs</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4>Frameworks &amp; Cloud</h4>
+            <div class="skill-pills">
+              <span>Node.js</span><span>Angular</span><span>Kafka</span><span>AWS</span><span>Databricks</span><span>Docker</span><span>CI/CD</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4>Tools &amp; Design</h4>
+            <div class="skill-pills">
+              <span>Figma</span><span>Adobe Suite</span><span>Tableau</span><span>GitHub</span><span>Jira</span><span>Notion</span><span>Miro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         BEYOND THE CODE — with overlays
+    ══════════════════════════════════════ -->
+    <section id="creative">
+      <div class="creative-header reveal">
+        <h2 class="h2">Not just <em>code.</em></h2>
+        <p class="creative-sub">My ideal Saturday: coding in the morning, painting in the afternoon, singing at night, all with coffee nearby. Engineering and art have never felt like opposites to me. Same instinct, different outputs.</p>
+      </div>
+      <div class="creative-panels">
+
+        <div class="creative-panel" data-overlay="music">
+          <div class="creative-panel-img">
+            <img src="images/diya-ukulele.jpg" alt="Music" />
+          </div>
+          <div class="creative-panel-overlay">
+            <h3>Music</h3>
+            <p>First place in singing · performed in musicals · plays ukulele</p>
+          </div>
+        </div>
+
+        <div class="creative-panel" data-overlay="art">
+          <div class="creative-panel-img">
+            <img src="images/art-silhouette.jpg" alt="Art" />
+          </div>
+          <div class="creative-panel-overlay">
+            <h3>Art</h3>
+            <p>Paintings, zentangle, watercolor — made by hand</p>
+          </div>
+        </div>
+
+        <div class="creative-panel" data-overlay="coffee">
+          <div class="creative-panel-img">
+            <img src="images/coffee.jpg" alt="Coffee" />
+          </div>
+          <div class="creative-panel-overlay">
+            <h3>Coffee</h3>
+            <p>The ritual, the ambiance, the clarity</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         LEADERSHIP
+    ══════════════════════════════════════ -->
+    <section id="leadership">
+      <div class="section-header reveal">
+        <h2 class="h2">Beyond <em>class.</em></h2>
+      </div>
+
+      <!-- Symposium feature card -->
+      <div class="symposium-card reveal">
+        <div class="symposium-img">
+          <img src="images/symposium-group.jpg" alt="AI Symposium" />
+        </div>
+        <div class="symposium-text">
+          <span class="section-label">Nov 2025 · 150+ Attendees</span>
+          <h3>Student AI Symposium — Co-Chair &amp; Host</h3>
+          <p>150+ people, Marriott Library. Brought in NVIDIA's VP of Product, ran lightning talks, moderated a panel with the U's Chief AI Officer, and gave my own talk: <em>"AI isn't our tool, it's our reflection."</em></p>
+          <a href="https://it.utah.edu/node4/posts/2025/december/ai-symposium.php" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Read the Article →</a>
+        </div>
+      </div>
+
+      <div class="lead-grid">
+        <div class="lead-card reveal">
+          <div class="lead-card-top">
+            <span class="lead-date">2025 – Present</span>
+            <span class="lead-badge">On Campus</span>
+          </div>
+          <h3>AI Tinker Lab — Lead</h3>
+          <p>Running a hands-on AI lab where students actually build things. The space I wished existed when I was starting out.</p>
+        </div>
+        <div class="lead-card reveal">
+          <div class="lead-card-top">
+            <span class="lead-date">Aug 2025 – Present</span>
+            <span class="lead-badge">Scholarship</span>
+          </div>
+          <h3>Goff Scholars — Product Owner</h3>
+          <p>Designed Korn Ferry's AI Value Score, validated $1.3M in Unilever savings with McKinsey, and mapped a $576K funding gap for a community health clinic. Real clients, real stakes.</p>
+        </div>
+        <div class="lead-card reveal">
+          <div class="lead-card-top">
+            <span class="lead-date">Dec 2024 – Jan 2025</span>
+          </div>
+          <h3>Adobe Express Web Design Challenge</h3>
+          <p>Redesigned the TECH-MOMS non-profit website working directly with their CEO.</p>
+          <a href="https://new.express.adobe.com/webpage/jmvCK2F3JAzBW" target="_blank" rel="noopener" class="lead-link">View the site →</a>
+        </div>
+        <div class="lead-card reveal">
+          <div class="lead-card-top">
+            <span class="lead-date">May – Jun 2024</span>
+            <span class="lead-badge">$2K Scholarship</span>
+          </div>
+          <h3>Program Vice President — Kahlert Initiative</h3>
+          <p>Curated the Tech Innovator Series by cold-emailing founders and executives until they said yes. Karl Sun, Steve Shillingford, Jennifer Smith.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════ -->
+    <section id="contact">
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <h2 class="h2">Let's <em>connect.</em></h2>
+          <p class="body-lg">If you made it this far, I'd love to hear from you. Heading to Goldman Sachs this summer, then figuring out what's next after December 2026. Always happy to talk about work, ideas, or the best coffee shop you've been to lately.</p>
+          <div class="contact-links">
+            <a href="mailto:diyamandot7@gmail.com" class="contact-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              diyamandot7@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/diya-mandot/" target="_blank" rel="noopener" class="contact-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <div class="contact-photo-wrap">
+            <img src="images/diya-photo.jpg" alt="Diya Mandot" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Diya Mandot</span>
+      <span>University of Utah · Salt Lake City, UT</span>
+    </footer>
+  </div><!-- /frame -->
+
+  <!-- ══════════════════════════════════════
+       CREATIVE OVERLAYS
+  ══════════════════════════════════════ -->
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <button class="overlay-close" id="overlayClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="overlay-inner" id="overlayInner"></div>
+  </div>
+
+  <!-- Overlay templates (hidden) -->
+  <template id="tpl-music">
+    <div class="ol-layout">
+      <div class="ol-header">
+        <span class="section-label">Beyond the Code</span>
+        <h2>Music</h2>
+        <p>First place in singing. Performed in musicals. Plays ukulele. Music is where I slow down and feel every note.</p>
+      </div>
+      <div class="ol-gallery">
+        <div class="ol-img ol-img--tall"><img src="images/diya-ukulele.jpg" alt="Diya playing ukulele" /><span>Ukulele sessions</span></div>
+        <div class="ol-img"><img src="images/music-certificate.jpg" alt="1st place singing certificate" /><span>1st Place — Singing, Utsav Bangalore 2020</span></div>
+        <div class="ol-img"><img src="images/music-show.png" alt="Hoga Koi Sunphra musical poster" /><span>Hoga Koi Sunphra — DPS Bangalore South</span></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="tpl-art">
+    <div class="ol-layout">
+      <div class="ol-header">
+        <span class="section-label">Beyond the Code</span>
+        <h2>Art</h2>
+        <p>Paintings, zentangle, watercolor. Intricate detail, total focus. The opposite of coding in the best way.</p>
+      </div>
+      <div class="ol-gallery ol-gallery--4">
+        <div class="ol-img ol-img--tall"><img src="images/art-eye.jpg" alt="Watercolor eye painting" /><span>Watercolor eye · Dec 2021</span></div>
+        <div class="ol-img"><img src="images/art-silhouette.jpg" alt="Silhouette galaxy painting" /><span>Silhouette in flames</span></div>
+        <div class="ol-img"><img src="images/art-zentangle.jpg" alt="Zentangle artwork" /><span>Zentangle ink</span></div>
+        <div class="ol-img"><img src="images/art-paintings.jpg" alt="Paintings on wall" /><span>Rajasthani portraits</span></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="tpl-coffee">
+    <div class="ol-layout">
+      <div class="ol-header">
+        <span class="section-label">Beyond the Code</span>
+        <h2>Coffee</h2>
+        <p>A good coffee shop is my second workspace. The ritual, the ambiance, the clarity that comes with the first sip. Let coffee connect us.</p>
+      </div>
+      <div class="ol-gallery">
+        <div class="ol-img ol-img--tall"><img src="images/coffee.jpg" alt="Iced coffee" /><span>The ritual</span></div>
+        <div class="ol-img"><img src="images/coffee-sign.jpg" alt="Let coffee connect us" /><span>"let coffee connect us."</span></div>
+        <div class="ol-img"><img src="images/diya-selfie.jpg" alt="Diya" /><span>Probably at a coffee shop</span></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
