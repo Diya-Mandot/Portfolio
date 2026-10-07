@@ -525,7 +525,7 @@ h1 em, h2 em, h3 em, .h2 em {
   .hero-photo-tag { justify-content: flex-start; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 1.5rem; }
   .hstat { white-space: normal; }
-  .hstat:first-child { grid-column: 1 / -1; }
+  .hstat strong { font-size: 1.125rem; }
 }
 
 /* ══════════════════════════════════════════════
@@ -633,6 +633,28 @@ h1 em, h2 em, h3 em, .h2 em {
 /* ══════════════════════════════════════════════
    PEOPLE
 ══════════════════════════════════════════════ */
+/* OpenAI partnership: what the conversations led to */
+.partner-callout {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem var(--card-pad);
+  margin-bottom: var(--grid-gap);
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--card-r);
+  box-shadow: var(--card-shadow);
+}
+.partner-callout .service-thumb { flex-shrink: 0; }
+.partner-text { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; }
+.partner-text p { font-size: var(--fs-body); line-height: 1.5; color: var(--text-body); }
+.partner-text strong { font-weight: 700; color: var(--text); }
+.partner-with { font-size: var(--fs-small); color: var(--text-light); line-height: 1.45; }
+@media (max-width: 680px) {
+  .partner-callout { flex-direction: column; align-items: flex-start; gap: 1rem; padding: var(--card-pad); }
+}
+
 .conv-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
