@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,500&display=swap" rel="stylesheet" />
   <!-- bump ?v= on both files after editing them so browsers fetch the new copy -->
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=14" />
 </head>
 <body>
 
@@ -166,9 +166,8 @@
         <p class="body">Leaders I brought to campus for 150+ students.</p>
       </div>
       <div class="partner-callout reveal">
-        <div class="service-thumb"><img src="images/logos/openai.svg" alt="OpenAI" /></div>
+        <img class="partner-logo" src="images/logos/openai.svg" alt="OpenAI" width="22" height="22" />
         <div class="partner-text">
-          <span class="lead-badge">OpenAI partnership</span>
           <!-- TODO(diya): Brian's title is from public speaker bios; confirm it's current -->
           <p><strong>Recruited by OpenAI</strong> to codify and author the national playbook for student AI symposiums.</p>
           <span class="partner-with">With Brian Johnsrud, Global Head of Educational Engagement, and Don Orth, Worldwide Product Marketing &amp; AI Enablement</span>
@@ -181,12 +180,15 @@
             <img src="images/karl-sun.jpeg" alt="Diya with Karl Sun" />
           </div>
           <div class="conv-info">
-            <h3 class="conv-name">Karl Sun</h3>
-            <span class="conv-title">Co-Founder &amp; Former CEO</span>
-            <span class="conv-org">Lucid Software</span>
-            <span class="conv-context">Tech Innovator Series · 2024</span>
-            <span class="conv-takeaway-label">What I took away</span>
-            <p class="conv-reflection">Talking to Karl changed how I think about building software that scales without losing its soul.</p>
+            <div class="conv-bio">
+              <h3 class="conv-name">Karl Sun</h3>
+              <span class="conv-title">Co-Founder &amp; Former CEO</span>
+              <span class="conv-org">Lucid Software</span>
+            </div>
+            <div class="conv-takeaway">
+              <span class="conv-takeaway-label">What I took away</span>
+              <p class="conv-reflection">Talking to Karl changed how I think about building software that scales without losing its soul.</p>
+            </div>
           </div>
         </div>
 
@@ -195,12 +197,15 @@
             <img src="images/steve-shillingford.jpeg" alt="Diya with Steve Shillingford" style="object-position: center center;" />
           </div>
           <div class="conv-info">
-            <h3 class="conv-name">Steve Shillingford</h3>
-            <span class="conv-title">Chief Executive Officer</span>
-            <span class="conv-org">DeepSee.ai</span>
-            <span class="conv-context">Tech Innovator Series · 2024</span>
-            <span class="conv-takeaway-label">What I took away</span>
-            <p class="conv-reflection">Steve showed me what it looks like to build AI with conviction, and the discipline to know what not to build.</p>
+            <div class="conv-bio">
+              <h3 class="conv-name">Steve Shillingford</h3>
+              <span class="conv-title">Chief Executive Officer</span>
+              <span class="conv-org">DeepSee.ai</span>
+            </div>
+            <div class="conv-takeaway">
+              <span class="conv-takeaway-label">What I took away</span>
+              <p class="conv-reflection">Steve showed me what it looks like to build AI with conviction, and the discipline to know what not to build.</p>
+            </div>
           </div>
         </div>
 
@@ -209,12 +214,15 @@
             <img src="images/jennifer-smith.jpeg" alt="Diya with Jennifer Smith" style="object-position: center 20%;" />
           </div>
           <div class="conv-info">
-            <h3 class="conv-name">Jennifer Smith</h3>
-            <span class="conv-title">Executive Vice President</span>
-            <span class="conv-org">Zions Bancorporation</span>
-            <span class="conv-context">Tech Innovator Series · 2024</span>
-            <span class="conv-takeaway-label">What I took away</span>
-            <p class="conv-reflection">Jennifer made it clear that the most important security is the kind that earns trust, not just compliance.</p>
+            <div class="conv-bio">
+              <h3 class="conv-name">Jennifer Smith</h3>
+              <span class="conv-title">Executive Vice President</span>
+              <span class="conv-org">Zions Bancorporation</span>
+            </div>
+            <div class="conv-takeaway">
+              <span class="conv-takeaway-label">What I took away</span>
+              <p class="conv-reflection">Jennifer made it clear that the most important security is the kind that earns trust, not just compliance.</p>
+            </div>
           </div>
         </div>
 
@@ -223,12 +231,15 @@
             <img src="images/william-barkley.jpeg" alt="Diya with William Barkley" />
           </div>
           <div class="conv-info">
-            <h3 class="conv-name">William Barkley</h3>
-            <span class="conv-title">VP of Product</span>
-            <span class="conv-org">NVIDIA</span>
-            <span class="conv-context">AI Symposium · Nov 2025</span>
-            <span class="conv-takeaway-label">What I took away</span>
-            <p class="conv-reflection">William gave me a new frame for thinking about AI infrastructure, and why what's invisible usually matters most.</p>
+            <div class="conv-bio">
+              <h3 class="conv-name">William Barkley</h3>
+              <span class="conv-title">VP of Product</span>
+              <span class="conv-org">NVIDIA</span>
+            </div>
+            <div class="conv-takeaway">
+              <span class="conv-takeaway-label">What I took away</span>
+              <p class="conv-reflection">William gave me a new frame for thinking about AI infrastructure, and why what's invisible usually matters most.</p>
+            </div>
           </div>
         </div>
 
@@ -237,12 +248,15 @@
             <img src="images/1769814388802.jpeg" alt="Diya with Telle Whitney" />
           </div>
           <div class="conv-info">
-            <h3 class="conv-name">Telle Whitney</h3>
-            <span class="conv-title">Co-Founder, Grace Hopper Celebration</span>
-            <span class="conv-org">Former CEO, AnitaB.org</span>
-            <span class="conv-context"></span>
-            <span class="conv-takeaway-label">What I took away</span>
-            <p class="conv-reflection">Telle reminded me that the most powerful technology is built by people who refuse to be invisible.</p>
+            <div class="conv-bio">
+              <h3 class="conv-name">Telle Whitney</h3>
+              <span class="conv-title">Co-Founder, Grace Hopper Celebration</span>
+              <span class="conv-org">Former CEO, AnitaB.org</span>
+            </div>
+            <div class="conv-takeaway">
+              <span class="conv-takeaway-label">What I took away</span>
+              <p class="conv-reflection">Telle reminded me that the most powerful technology is built by people who refuse to be invisible.</p>
+            </div>
           </div>
         </div>
 
@@ -771,6 +785,6 @@
     </div>
   </template>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>

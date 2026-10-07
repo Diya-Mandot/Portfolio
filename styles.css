@@ -633,36 +633,34 @@ h1 em, h2 em, h3 em, .h2 em {
 /* ══════════════════════════════════════════════
    PEOPLE
 ══════════════════════════════════════════════ */
-/* OpenAI partnership: what the conversations led to */
+/* OpenAI partnership: a slim feature bar above the cards */
 .partner-callout {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.25rem var(--card-pad);
-  margin-bottom: var(--grid-gap);
-  background: var(--surface);
-  border: 1px solid var(--divider);
-  border-left: 3px solid var(--accent);
-  border-radius: var(--card-r);
-  box-shadow: var(--card-shadow);
+  align-items: flex-start;
+  gap: .85rem;
+  padding: .9rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, var(--accent-soft) 0%, var(--surface) 55%);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
 }
-.partner-callout .service-thumb { flex-shrink: 0; }
-.partner-text { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; }
-.partner-text p { font-size: var(--fs-body); line-height: 1.5; color: var(--text-body); }
+.partner-logo { width: 22px; height: 22px; flex-shrink: 0; margin-top: .1rem; }
+.partner-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.partner-text p { font-size: var(--fs-body); line-height: 1.45; color: var(--text-body); }
 .partner-text strong { font-weight: 700; color: var(--text); }
 .partner-with { font-size: var(--fs-small); color: var(--text-light); line-height: 1.45; }
-@media (max-width: 680px) {
-  .partner-callout { flex-direction: column; align-items: flex-start; gap: 1rem; padding: var(--card-pad); }
-}
 
 .conv-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--grid-gap);
 }
+/* subgrid lines up photo / bio / takeaway across every card in a row */
 .conv-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0;
   overflow: hidden;
 }
 .conv-photo-wrap {
@@ -679,31 +677,41 @@ h1 em, h2 em, h3 em, .h2 em {
 .conv-card:hover .conv-photo-wrap img { transform: scale(1.04); }
 
 .conv-info {
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: .2rem;
-  flex: 1;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: 0;
 }
+.conv-bio { padding: 1.25rem 1.25rem 1.1rem; display: flex; flex-direction: column; }
+/* name, then a fixed gap, then role (light) and company (strong) as two distinct lines */
+.conv-name { margin-bottom: .5rem; }
 .conv-title {
   font-size: var(--fs-small);
+  font-weight: 400;
   color: var(--text-mid);
   line-height: 1.4;
 }
 .conv-org {
   font-size: var(--fs-small);
   font-weight: 600;
-  color: var(--text-body);
+  color: var(--text);
   line-height: 1.4;
+  margin-top: .2rem;
 }
-.conv-context { margin-top: .35rem; }
+.conv-context { margin-top: .6rem; }
 .conv-context:empty { display: none; }
-.conv-takeaway-label {
+
+/* her reflection: a white card footer, set apart from the bio */
+.conv-takeaway {
+  padding: 1rem 1.25rem 1.25rem;
+  background: var(--white);
   border-top: 1px solid var(--divider);
-  padding-top: .75rem;
-  margin-top: .75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
 }
-/* her reflections, set as pull quotes */
+.conv-takeaway-label { white-space: nowrap; letter-spacing: .08em; }
+/* pull-quote type */
 .conv-reflection {
   font-family: var(--font-serif);
   font-style: italic;
@@ -711,7 +719,6 @@ h1 em, h2 em, h3 em, .h2 em {
   font-weight: 500;
   line-height: 1.45;
   color: var(--text-body);
-  margin-top: .25rem;
 }
 
 .conv-cta {
