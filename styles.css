@@ -526,12 +526,17 @@ h1 em, h2 em, h3 em, .h2 em {
   white-space: nowrap;
 }
 .hstat strong {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
   font-size: var(--fs-stat);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.2;
   color: var(--text);
 }
+.hstat-logo { width: 24px; height: 24px; border-radius: 6px; flex-shrink: 0; }
+.hstat-logo--mark { border-radius: 0; }
 .hstat span {
   font-size: var(--fs-small);
   font-weight: 500;
@@ -544,10 +549,10 @@ h1 em, h2 em, h3 em, .h2 em {
   flex-shrink: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .hero-stats {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
     justify-content: start;
     align-items: start;
     gap: 1.5rem 2.5rem;
@@ -561,7 +566,8 @@ h1 em, h2 em, h3 em, .h2 em {
   .hero-photo-tag { justify-content: flex-start; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 1.5rem; }
   .hstat { white-space: normal; }
-  .hstat strong { font-size: 1.125rem; }
+  .hstat strong { font-size: 1.0625rem; gap: .35rem; white-space: nowrap; }
+  .hstat-logo { width: 18px; height: 18px; border-radius: 4px; }
 }
 
 /* ══════════════════════════════════════════════
@@ -570,17 +576,16 @@ h1 em, h2 em, h3 em, .h2 em {
 .frame > #glance {
   padding-left: 0;
   padding-right: 0;
-  overflow: hidden;
+  padding-top: 48px;
 }
 .glance-eyebrow { padding: 0 var(--gutter); margin-bottom: 1.5rem; }
 
 /* five stat cards: big number first, label capped at two lines */
 .glance-inner {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--grid-gap);
   padding: 0 var(--gutter);
-  margin-bottom: 3.5rem;
 }
 .glance-stat {
   display: flex;
@@ -591,6 +596,11 @@ h1 em, h2 em, h3 em, .h2 em {
   border: 1px solid var(--divider);
   border-radius: 16px;
   min-width: 0;
+}
+/* the creative half of the row */
+.glance-stat--creative {
+  background: var(--accent-soft);
+  border-color: #EBDAD6;
 }
 .glance-cat {
   font-size: var(--fs-label);
@@ -616,52 +626,11 @@ h1 em, h2 em, h3 em, .h2 em {
   line-height: 1.45;
 }
 
-/* ticker: every item is a pill with a round photo */
-.glance-marquee {
-  border-top: 1px solid var(--divider);
-  border-bottom: 1px solid var(--divider);
-  overflow: hidden;
-  padding: 1.1rem 0;
-}
-.glance-marquee-track {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  width: max-content;
-  animation: glance-scroll 50s linear infinite;
-}
-.mq-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: .6rem;
-  padding: .3rem 1rem .3rem .3rem;
-  background: var(--surface);
-  border: 1px solid var(--divider);
-  border-radius: 100px;
-  font-size: var(--fs-small);
-  font-weight: 500;
-  color: var(--text-body);
-  white-space: nowrap;
-}
-.mq-pill img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--white);
-  flex-shrink: 0;
-}
-@keyframes glance-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-@media (max-width: 900px) {
-  .glance-inner { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 760px) {
+  .glance-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
-  .glance-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 2.5rem; }
-  .glance-stat:last-child { grid-column: 1 / -1; }
+  .glance-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .glance-num { font-size: 2rem; }
   .glance-stat { padding: 1rem; }
 }
@@ -691,9 +660,9 @@ h1 em, h2 em, h3 em, .h2 em {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--grid-gap);
 }
-/* the ticker above already ends in a divider, so this section needs less lead-in */
-.frame > #conversations { padding-top: 56px; }
-@media (max-width: 680px) { .frame > #conversations { padding-top: 40px; } }
+/* follows the compact stats block, so it needs less lead-in than other sections */
+.frame > #conversations { padding-top: 72px; }
+@media (max-width: 680px) { .frame > #conversations { padding-top: 48px; } }
 
 /* subgrid lines up photo / bio / takeaway across every card in a row */
 .conv-card {
@@ -1390,6 +1359,6 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .glance-marquee-track, .available-dot { animation: none; }
+  .available-dot { animation: none; }
   *, *::before, *::after { transition-duration: 0s !important; }
 }
