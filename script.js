@@ -20,11 +20,12 @@ document.querySelectorAll('#hero .reveal').forEach((el, i) => {
 (function () {
   var glance = document.getElementById('glance');
   if (!glance) return;
-  // The HTML holds the real numbers (for crawlers and link previews);
-  // only reset to 0 here when we're actually going to animate.
+  // The HTML holds the real numbers, and a screen-reader copy sits beside each
+  // animated one. Numbers only drop to 0 at the moment the strip scrolls into
+  // view, so anything reading the page on load (crawlers, link previews) sees
+  // the real values.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var counts = glance.querySelectorAll('.count');
-  counts.forEach(function (el) { el.textContent = '0'; });
   var animated = false;
   var observer = new IntersectionObserver(function (entries) {
     if (!entries[0].isIntersecting || animated) return;
