@@ -172,7 +172,9 @@ h1 em, h2 em, h3 em, .h2 em {
 }
 
 .section-header { margin-bottom: 2.5rem; }
-.section-header .body { margin-top: 1rem; }
+/* heading + subtitle read as one unit, with content close below */
+.section-header .body { margin-top: .375rem; }
+.section-header:has(.body) { margin-bottom: 1.5rem; }
 
 /* ══════════════════════════════════════════════
    BUTTONS + LINKS
@@ -655,6 +657,10 @@ h1 em, h2 em, h3 em, .h2 em {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--grid-gap);
 }
+/* the ticker above already ends in a divider, so this section needs less lead-in */
+.frame > #conversations { padding-top: 56px; }
+@media (max-width: 680px) { .frame > #conversations { padding-top: 40px; } }
+
 /* subgrid lines up photo / bio / takeaway across every card in a row */
 .conv-card {
   display: grid;
