@@ -629,6 +629,63 @@ h1 em, h2 em, h3 em, .h2 em {
 @media (max-width: 760px) {
   .glance-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* personality strip: a slow photo reel, paused on hover */
+.glance-marquee {
+  margin-top: 3rem;
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+  overflow: hidden;
+  padding: 1rem 0;
+}
+.glance-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: glance-scroll 55s linear infinite;
+}
+.glance-marquee:hover .glance-marquee-track { animation-play-state: paused; }
+/* each copy carries its own trailing gap so the -50% loop has no seam */
+.mq-group {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding-right: .75rem;
+  list-style: none;
+}
+.mq-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .3rem 1.1rem .3rem .3rem;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: 100px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text-body);
+  white-space: nowrap;
+}
+.mq-pill img,
+.mq-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.mq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.mq-icon svg { width: 20px; height: 20px; }
+@keyframes glance-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (max-width: 680px) { .glance-marquee { margin-top: 2.5rem; } }
 @media (max-width: 600px) {
   .glance-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .glance-num { font-size: 2rem; }
@@ -1360,5 +1417,9 @@ footer {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .available-dot { animation: none; }
+  /* static, wrapped row instead of scrolling */
+  .glance-marquee-track { animation: none; width: auto; padding: 0 var(--gutter); }
+  .mq-group { flex-wrap: wrap; padding-right: 0; }
+  .mq-group[aria-hidden="true"] { display: none; }
   *, *::before, *::after { transition-duration: 0s !important; }
 }
