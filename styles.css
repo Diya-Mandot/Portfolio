@@ -966,23 +966,79 @@ h1 em, h2 em, h3 em, .h2 em {
 /* ══════════════════════════════════════════════
    AWARDS (compact list)
 ══════════════════════════════════════════════ */
-.awards-list {
-  list-style: none;
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+.award-group {
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--card-r);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-pad);
+}
+.award-group-title {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: .5rem;
+}
+.award-list { list-style: none; }
+.award {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 0;
   border-top: 1px solid var(--divider);
 }
-.awards-list li {
+.award:first-child { border-top: 0; }
+.award-badge {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: .25rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.award-badge--wide { font-size: .9375rem; }
+.award-body { min-width: 0; display: flex; flex-direction: column; gap: .25rem; }
+.award-head {
+  display: flex;
   flex-wrap: wrap;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--divider);
+  align-items: baseline;
+  gap: .15rem .6rem;
 }
 .award-name {
   font-size: var(--fs-body);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
+  line-height: 1.35;
+}
+.award-desc {
+  font-size: var(--fs-small);
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.award-project {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.award-project:hover { color: var(--text); }
+
+@media (max-width: 760px) {
+  .awards-grid { grid-template-columns: 1fr; }
 }
 
 /* ══════════════════════════════════════════════

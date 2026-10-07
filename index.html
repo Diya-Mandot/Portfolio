@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,500&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
   <!-- bump ?v= on both files after editing them so browsers fetch the new copy -->
-  <link rel="stylesheet" href="styles.css?v=18" />
+  <link rel="stylesheet" href="styles.css?v=19" />
 </head>
 <body>
 
@@ -481,7 +481,7 @@
           <div class="project-body">
             <div class="project-header">
               <span class="ptag">Hackathon · 6 hrs</span>
-              <span class="ptag ptag--award">Honorable Mention · Intermountain AI</span>
+              <span class="ptag ptag--award">Honorable Mention · Intermountain AI &amp; AWS</span>
             </div>
             <h3>CommunityFlow AI</h3>
             <p class="hack-org">Intermountain Health Hackathon</p>
@@ -559,13 +559,61 @@
       <div class="section-header reveal">
         <h2 class="h2">Awards &amp; <em>recognition.</em></h2>
       </div>
-      <ul class="awards-list reveal">
-        <li><span class="award-name">SPUR National Fellowship</span><span class="award-meta">University of Utah · 2026</span></li>
-        <li><span class="award-name">Kahlert Impact Prize</span><span class="award-meta">Kahlert School of Computing</span></li>
-        <li><span class="award-name">1st Place, OpenAI Hackathon</span><span class="award-meta">Apr 2026</span></li>
-        <li><span class="award-name">Honorable Mention, Intermountain Health Hackathon</span></li>
-        <li><span class="award-name">3rd Place, Wilkes Center Climate Hackathon</span></li>
-      </ul>
+      <!-- TODO(diya): Intermountain/AWS: confirm Honorable Mention vs 2nd Place -->
+      <div class="awards-grid">
+        <div class="award-group reveal">
+          <h3 class="award-group-title">Hackathons &amp; competitions</h3>
+          <ul class="award-list">
+          <li class="award">
+            <span class="award-badge">1st</span>
+            <div class="award-body">
+              <div class="award-head"><span class="award-name">OpenAI Hackathon</span><span class="award-meta">Apr 2026</span></div>
+              <p class="award-desc"><a href="#projects" class="award-project">PiecesOfThem</a> · Built a RAG system to automate Sanfilippo Syndrome approval paperwork after FDA rejections.</p>
+            </div>
+          </li>
+          <li class="award">
+            <span class="award-badge">3rd</span>
+            <div class="award-body">
+              <div class="award-head"><span class="award-name">Climate Change Hackathon</span><span class="award-meta">Wilkes Center</span></div>
+              <p class="award-desc"><a href="#projects" class="award-project">VoltVault</a> · Engineered a bidirectional charger system to optimize grid energy storage.</p>
+            </div>
+          </li>
+          <li class="award">
+            <span class="award-badge">HM</span>
+            <div class="award-body">
+              <div class="award-head"><span class="award-name">Intermountain AI &amp; AWS</span><span class="award-meta">2 honorable mentions</span></div>
+              <p class="award-desc"><a href="#projects" class="award-project">CommunityFlow AI</a> · Recognized for technical excellence in a regional AI competition.</p>
+            </div>
+          </li>
+          </ul>
+        </div>
+        <div class="award-group reveal">
+          <h3 class="award-group-title">Grants &amp; honors</h3>
+          <ul class="award-list">
+          <li class="award">
+            <span class="award-badge award-badge--wide">$5K</span>
+            <div class="award-body">
+              <div class="award-head"><span class="award-name">SPUR National Fellowship</span><span class="award-meta">2026</span></div>
+              <p class="award-desc">Competitive $5,000 merit stipend for national-level research.</p>
+            </div>
+          </li>
+          <li class="award">
+            <span class="award-badge award-badge--wide">$2K</span>
+            <div class="award-body">
+              <div class="award-head"><span class="award-name">Charles Hansen &amp; Terri Case Endowed Scholarship</span></div>
+              <p class="award-desc">$2,000 merit scholarship for academic excellence.</p>
+            </div>
+          </li>
+          <li class="award">
+            <span class="award-badge">★</span>
+            <div class="award-body">
+              <div class="award-head"><span class="award-name">Kahlert Impact Prize</span><span class="award-meta">Kahlert School of Computing</span></div>
+              <p class="award-desc">Recognized for leadership and tech-community impact.</p>
+            </div>
+          </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- ══════════════════════════════════════
@@ -811,6 +859,6 @@
     </div>
   </template>
 
-  <script src="script.js?v=18"></script>
+  <script src="script.js?v=19"></script>
 </body>
 </html>
