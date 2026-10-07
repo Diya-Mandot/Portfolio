@@ -1131,6 +1131,25 @@ h1 em, h2 em, h3 em, .h2 em {
 .creative-panel-title::after { content: ' →'; color: var(--pink); }
 .creative-panel-desc { font-size: var(--fs-small); color: rgba(255,255,255,.7); }
 
+/* Instagram link under the Music card and in its pop-up */
+.creative-panels { align-items: start; }
+.creative-item { display: flex; flex-direction: column; gap: .75rem; }
+.insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  align-self: flex-start;
+  padding: .25rem .25rem;
+  font-size: var(--fs-small);
+  color: var(--pink);
+  transition: color .2s;
+}
+.insta-link svg { width: 18px; height: 18px; flex-shrink: 0; }
+.insta-link strong { font-weight: 600; }
+.insta-link:hover { color: var(--white); }
+.insta-link:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.ol-insta { margin-top: 1rem; }
+
 @media (max-width: 900px) {
   .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-figure { max-width: 380px; }

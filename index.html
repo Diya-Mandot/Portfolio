@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,500&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
   <!-- bump ?v= on both files after editing them so browsers fetch the new copy -->
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=18" />
 </head>
 <body>
 
@@ -668,13 +668,16 @@
         </div>
 
         <div class="creative-panels">
-          <button type="button" class="creative-panel reveal" data-overlay="music">
+          <div class="creative-item reveal">
+          <button type="button" class="creative-panel" data-overlay="music">
             <img loading="lazy" src="images/diya-ukulele.jpg" alt="Diya playing ukulele" />
             <span class="creative-panel-text">
               <span class="creative-panel-title">Music</span>
               <span class="creative-panel-desc">First place in singing · musicals · ukulele</span>
             </span>
           </button>
+          <a class="insta-link" href="https://www.instagram.com/diya.mandot/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg><span>Hear me sing on Instagram · <strong>@diya.mandot</strong> →</span></a>
+          </div>
           <button type="button" class="creative-panel reveal" data-overlay="coffee">
             <img loading="lazy" src="images/coffee.jpg" alt="Iced coffee" />
             <span class="creative-panel-text">
@@ -783,6 +786,7 @@
         <span class="section-label">Beyond the Code</span>
         <h2>Music</h2>
         <p>First place in singing. Performed in musicals. Plays ukulele. Music is where I slow down and feel every note.</p>
+        <a class="insta-link ol-insta" href="https://www.instagram.com/diya.mandot/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg><span>Watch me sing on Instagram · <strong>@diya.mandot</strong> →</span></a>
       </div>
       <div class="ol-gallery">
         <div class="ol-img ol-img--tall"><img loading="lazy" src="images/diya-ukulele.jpg" alt="Diya playing ukulele" /><span>Ukulele sessions</span></div>
@@ -807,6 +811,6 @@
     </div>
   </template>
 
-  <script src="script.js?v=17"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
