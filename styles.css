@@ -536,67 +536,83 @@ h1 em, h2 em, h3 em, .h2 em {
   padding-right: 0;
   overflow: hidden;
 }
-.glance-eyebrow { padding: 0 var(--gutter); margin-bottom: 1.25rem; }
+.glance-eyebrow { padding: 0 var(--gutter); margin-bottom: 1.5rem; }
+
+/* five stat cards: big number first, label capped at two lines */
 .glance-inner {
-  display: flex;
-  align-items: flex-start;
-  padding: 0 var(--gutter) 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  padding: 0 var(--gutter);
+  margin-bottom: 3.5rem;
 }
 .glance-stat {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: .4rem;
+  gap: .35rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: 16px;
   min-width: 0;
 }
-.glance-divider {
-  width: 1px;
-  align-self: stretch;
-  background: var(--divider);
-  flex-shrink: 0;
-  margin: 0 1.25rem;
+.glance-cat {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: .35rem;
 }
 .glance-num {
-  font-size: var(--fs-stat);
-  font-weight: 700;
+  font-size: 2.25rem;
+  font-weight: 800;
   color: var(--text);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
+  line-height: 1;
+  letter-spacing: -0.04em;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
-.glance-unit { color: var(--text-mid); font-weight: 500; }
+.glance-unit { font-size: .6em; font-weight: 600; letter-spacing: -0.01em; color: var(--text-mid); }
 .glance-label {
   font-size: var(--fs-small);
   color: var(--text-mid);
   line-height: 1.45;
 }
 
+/* ticker: every item is a pill with a round photo */
 .glance-marquee {
   border-top: 1px solid var(--divider);
   border-bottom: 1px solid var(--divider);
   overflow: hidden;
-  padding: .9rem 0;
+  padding: 1.1rem 0;
 }
 .glance-marquee-track {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
-  white-space: nowrap;
+  gap: .75rem;
   width: max-content;
-  animation: glance-scroll 45s linear infinite;
+  animation: glance-scroll 50s linear infinite;
 }
-.glance-marquee-track span {
+.mq-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .3rem 1rem .3rem .3rem;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: 100px;
   font-size: var(--fs-small);
   font-weight: 500;
-  color: var(--text-mid);
+  color: var(--text-body);
+  white-space: nowrap;
 }
-.glance-marquee-track .dot { color: var(--border-strong); }
-.mq-photo {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
+.mq-pill img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
   object-fit: cover;
+  background: var(--white);
   flex-shrink: 0;
 }
 @keyframes glance-scroll {
@@ -605,12 +621,13 @@ h1 em, h2 em, h3 em, .h2 em {
 }
 
 @media (max-width: 900px) {
-  .glance-inner { flex-wrap: wrap; gap: 1.5rem 0; }
-  .glance-stat { flex: 0 0 33.333%; padding-right: 1rem; }
-  .glance-divider { display: none; }
+  .glance-inner { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-@media (max-width: 500px) {
-  .glance-stat { flex-basis: 50%; }
+@media (max-width: 600px) {
+  .glance-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 2.5rem; }
+  .glance-stat:last-child { grid-column: 1 / -1; }
+  .glance-num { font-size: 2rem; }
+  .glance-stat { padding: 1rem; }
 }
 
 /* ══════════════════════════════════════════════
