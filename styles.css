@@ -157,7 +157,6 @@ h1 em, h2 em, h3 em, .h2 em {
 .section-label,
 .glance-eyebrow,
 .hero-eyebrow,
-.skill-group h4,
 .conv-takeaway-label,
 .pstat span,
 .art-label {
@@ -280,10 +279,8 @@ h1 em, h2 em, h3 em, .h2 em {
 /* neutral tags */
 .service-tags,
 .project-tech-row,
-.skill-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
 .service-tags span,
 .project-tech-row span,
-.skill-pills span,
 .ptag {
   font-size: var(--fs-label);
   font-weight: 500;
@@ -1242,22 +1239,6 @@ h1 em, h2 em, h3 em, .h2 em {
   .creative-panel { grid-template-columns: 72px 1fr; }
   .creative-panel img { width: 72px; height: 72px; }
 }
-
-/* ══════════════════════════════════════════════
-   TOOLKIT
-══════════════════════════════════════════════ */
-.skills-layout {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 3rem;
-  align-items: start;
-}
-.skills-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
-.skill-group h4 { margin-bottom: .85rem; }
-.skill-pills span { cursor: default; }
-
-@media (max-width: 900px) { .skills-layout { grid-template-columns: 1fr; gap: 2rem; } }
-@media (max-width: 600px) { .skills-groups { grid-template-columns: 1fr; } }
 
 /* ══════════════════════════════════════════════
    CONTACT
