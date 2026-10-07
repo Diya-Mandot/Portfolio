@@ -278,7 +278,7 @@ h1 em, h2 em, h3 em, .h2 em {
 
 /* neutral tags */
 .service-tags,
-.project-tech-row,
+.project-tech-row { display: flex; flex-wrap: wrap; gap: .4rem; }
 .service-tags span,
 .project-tech-row span,
 .ptag {
