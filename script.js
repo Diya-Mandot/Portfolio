@@ -20,7 +20,11 @@ document.querySelectorAll('#hero .reveal').forEach((el, i) => {
 (function () {
   var glance = document.getElementById('glance');
   if (!glance) return;
+  // The HTML holds the real numbers (for crawlers and link previews);
+  // only reset to 0 here when we're actually going to animate.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var counts = glance.querySelectorAll('.count');
+  counts.forEach(function (el) { el.textContent = '0'; });
   var animated = false;
   var observer = new IntersectionObserver(function (entries) {
     if (!entries[0].isIntersecting || animated) return;
@@ -83,3 +87,24 @@ document.querySelectorAll('.creative-panel').forEach(panel => {
 overlayClose.addEventListener('click', closeOverlay);
 overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+
+/* ── ACTIVE NAV LINK ── */
+(function () {
+  var links = {};
+  navLinks.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    links[a.getAttribute('href').slice(1)] = a;
+  });
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var link = links[entry.target.id];
+      if (!link) return;
+      if (entry.isIntersecting) {
+        Object.values(links).forEach(function (a) { a.classList.remove('active'); });
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('.frame > section[id]').forEach(function (s) { spy.observe(s); });
+})();
