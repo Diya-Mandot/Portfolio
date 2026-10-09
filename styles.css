@@ -1059,6 +1059,17 @@ h1 em, h2 em, h3 em, .h2 em {
   text-underline-offset: 3px;
 }
 .award-project:hover { color: var(--text); }
+.awards-photo { margin-top: var(--grid-gap); }
+.awards-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--card-r);
+}
+.awards-photo figcaption {
+  margin-top: .75rem;
+  font-size: var(--fs-small);
+  color: var(--text-light);
+}
 
 @media (max-width: 760px) {
   .awards-grid { grid-template-columns: 1fr; }
